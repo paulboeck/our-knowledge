@@ -10,7 +10,7 @@ jobs:
     name: Build
     runs-on: self-hosted
     env:
-      CACHE_UPLOAD_CHUNK_SIZE: 16777216
+      CACHE_UPLOAD_CHUNK_SIZE: 16777216 # Added this line to prevent cache upload from timing out, default chunk size is 32M
     steps:
       - uses: actions/checkout@v2
         with:
