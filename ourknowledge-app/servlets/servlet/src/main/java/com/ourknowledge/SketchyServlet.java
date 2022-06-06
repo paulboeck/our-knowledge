@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * SketchyShitServlet
+ * SketchyServlet
  */
-public class SketchyShitServlet {
+public class SketchyServlet {
 
     
     public List<String> getTodosOfStatus(String status) {
@@ -20,7 +20,6 @@ public class SketchyShitServlet {
         Statement stm=null;
 
         try {
-            Class.forName("org.h2.Driver");
             Connection conn = DriverManager.getConnection("jdbc:h2:~/test");
             stm = conn.createStatement();
             String sqlquery = "SELECT description from todos where status=" + status;
